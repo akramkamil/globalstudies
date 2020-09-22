@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+//breakPoint
+$media-pc:768px;
+$media-sp:768px;
+//color
+$black: #333;
+$white: white;
+$blue: #005C92;
+$green: #CFDC30;
+$green-dark: #7DC05C;
+$gray: #707070;
+$bg-green: #e3e992;
+$bg-green-dark: #badba8;
+
+* {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  box-sizing: border-box
+}
+html {
+  font-size: 62.5%;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  //scroll-behavior:smooth; //リンクをスムーズスクロール
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  //font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: palt
+}
+article,
+aside,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block
+}
+ol,
+ul {
+  list-style: none
+}
+blockquote,
+q {
+  quotes: none
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none
+}
+input,
+select {
+  vertical-align: middle
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  table-layout: auto
+}
+a {
+  display: inline-block;
+  backface-visibility: hidden
+}
+address {
+  font-style: normal
+}
+
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border: 0
+}
+img {
+  display: block;
+}
+.bold {
+  font-weight: 700
+}
+.normal {
+  font-weight: 400
+}
+.underline {
+  text-decoration: underline
+}
+.center {
+  text-align: center
+}
+section {
+  clear: both
+}
+.wrapper,
+section {
+  position: relative
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto
+}
+#wrapper {
+  position: relative;
+  overflow: hidden;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+#footer {
+  margin-top: auto
+}
+@media screen and (max-width:767px) {
+  .sp {
+    display: block
+  }
+  .pc {
+    display: none
+  }
+}
+@media screen and (min-width:768px) {
+  .sp {
+    display: none
+  }
+  .pc {
+    display: block
+  }
+  a[href^="tel:"] {
+    pointer-events: none
+  }
+}
